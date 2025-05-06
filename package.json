@@ -1,0 +1,30 @@
+{
+  "name": "agenda-collector",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "deploy": "nuxt build && npx firebase-tools deploy",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "firebase-admin": "^11.11.0",
+    "firebase-functions": "^4.4.1",
+    "firebase-functions-test": "^3.1.0",
+    "nuxt": "^3.17.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "dependencies": {
+    "@firebase/app-types": "^0.9.0",
+    "bootstrap": "^5.3.2",
+    "firebase": "^10.4.0",
+    "nuxt-vuefire": "^0.4.0",
+    "p5": "^1.7.0",
+    "qrcode": "^1.5.3"
+  }
+}

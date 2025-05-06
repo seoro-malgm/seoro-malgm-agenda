@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /$
+Allow: /works/
+Allow: /contact
+Disallow: /auth/
+Disallow: /admin/
+Sitemap: https://seoro-malgm.studio/sitemap.xml
