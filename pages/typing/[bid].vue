@@ -132,7 +132,6 @@ const showModalQrCode = ref(false);
   display: flex;
   flex-direction: column;
   align-items: center;
-  // max-width: 80vw;
   width: 100%;
   height: calc(100vh - 80px);
   max-height: calc(100vh - 80px);
@@ -172,8 +171,6 @@ const showModalQrCode = ref(false);
       align-items: center;
       justify-content: flex-end;
       padding: 0 1rem;
-      // border: 1px solid $primary;
-      // border-bottom-width: 0;
       button {
         padding: 0.5rem;
         border-radius: 0;

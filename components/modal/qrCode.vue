@@ -131,7 +131,6 @@ watch(
   }
 }
 .modal-body {
-  // margin-top: 12px;
   padding-bottom: 0;
   display: flex;
   flex-direction: column;

@@ -240,12 +240,7 @@ const onClicked = item => {
   width: 100%;
   height: calc(100vh - 32px);
   max-height: calc(100vh - 32px);
-  // @media (min-width: 1280px) {
 
-  // }
-
-  // overflow-y: auto;
-  // padding-bottom: 12px;
   margin: 0 auto;
   header.board-header {
     align-self: stretch;
@@ -265,8 +260,6 @@ const onClicked = item => {
     align-items: center;
     justify-content: flex-end;
     padding: 0 1rem;
-    // border: 1px solid $primary;
-    // border-bottom-width: 0;
     button {
       padding: 0.5rem;
       border-radius: 0;
