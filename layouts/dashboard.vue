@@ -10,7 +10,7 @@
 
 <script setup></script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 #main {
   margin-bottom: 8px;
   padding: 12px 12px 0;

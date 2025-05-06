@@ -2,7 +2,7 @@
   <form
     class="form"
     @submit.prevent="$emit('submit', $event)"
-    @change="($event) => $emit('change', $event)"
+    @change="$event => $emit('change', $event)"
   >
     <slot />
     <section class="form-footer">
@@ -21,11 +21,11 @@ export default {
   // },
   setup(props) {
     return {};
-  },
+  }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .form {
   .form-footer {
     margin-top: 4px;

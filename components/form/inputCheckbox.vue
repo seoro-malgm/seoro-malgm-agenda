@@ -16,13 +16,13 @@ const props = defineProps({
   items: {
     type: Array,
     required: true,
-    default: [],
-  },
+    default: []
+  }
 });
 const emits = defineEmits({
-  input: (payload) => {
+  input: payload => {
     return true;
-  },
+  }
 });
 const value = ref([]);
 watch(
@@ -33,7 +33,7 @@ watch(
 );
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .input-group {
   margin-bottom: 4px;
   .checkbox-list {

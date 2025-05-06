@@ -21,18 +21,18 @@
 const props = defineProps({
   item: {
     type: [Object, null],
-    required: true,
+    required: true
   },
   show: {
     type: Boolean,
     required: true,
-    default: false,
-  },
+    default: false
+  }
 });
 
 watch(
   () => props.show,
-  (n) => {
+  n => {
     // 모달이 열릴 때
     if (n) {
     }
@@ -40,7 +40,7 @@ watch(
 );
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .modal-content {
   width: 98vw;
   height: calc(100vh - 80px);

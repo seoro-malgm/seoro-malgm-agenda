@@ -1,10 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   app: {
     head: {
-      title: "서로맑음 아젠다 | 서로맑음 스튜디오의 커뮤니티 툴",
+      title: "서로맑음 아젠다 | 서로맑음이 의견을 모으고, 소통합니다",
       htmlAttrs: {
         lang: "ko-KR"
       },
@@ -15,12 +17,12 @@ export default defineNuxtConfig({
         {
           name: "title",
           property: "title",
-          content: "서로맑음 아젠다 | 서로맑음 스튜디오의 커뮤니티 툴"
+          content: "서로맑음 아젠다 | 의견을 모으고, 소통합니다"
         },
         {
           name: "description",
           property: "description",
-          content: "서로맑음 아젠다 | 서로맑음 스튜디오의 커뮤니티 툴"
+          content: "서로맑음 아젠다 | 의견을 모으고, 소통합니다"
         },
         {
           name: "keyword",
@@ -34,12 +36,12 @@ export default defineNuxtConfig({
         {
           name: "og:title",
           property: "og:title",
-          content: "서로맑음 아젠다 | 서로맑음 스튜디오의 커뮤니티 툴"
+          content: "서로맑음 아젠다 | 의견을 모으고, 소통합니다"
         },
         {
           name: "og:description",
           property: "og:description",
-          content: "서로맑음 아젠다 | 서로맑음 스튜디오의 커뮤니티 툴"
+          content: "서로맑음 아젠다 | 의견을 모으고, 소통합니다"
         },
         {
           name: "og:url",
@@ -54,7 +56,7 @@ export default defineNuxtConfig({
         {
           name: "og:site_name",
           property: "og:site_name",
-          content: "서로맑음 아젠다 | 서로맑음 스튜디오의 커뮤니티 툴"
+          content: "서로맑음 아젠다 | 의견을 모으고, 소통합니다"
         },
         {
           name: "msapplication-TileImage",
@@ -85,11 +87,11 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:title",
-          content: "서로맑음 아젠다 | 서로맑음 스튜디오의 커뮤니티 툴"
+          content: "서로맑음 아젠다 | 의견을 모으고, 소통합니다"
         },
         {
           name: "twitter:description",
-          content: "서로맑음 아젠다 | 서로맑음 스튜디오의 커뮤니티 툴"
+          content: "서로맑음 아젠다 | 의견을 모으고, 소통합니다"
         },
         {
           name: "twitter:image",
@@ -118,10 +120,10 @@ export default defineNuxtConfig({
           sizes: "16x16",
           href: "/favicon-16x16.png"
         },
-        {
-          rel: "manifest",
-          href: "/site.webmanifest"
-        },
+        // {
+        //   rel: "manifest",
+        //   href: "/site.webmanifest"
+        // },
         {
           rel: "mask-icon",
           color: "#001b7f",
@@ -157,13 +159,9 @@ export default defineNuxtConfig({
   },
   // modules: [],
   css: ["~/assets/css/main.css"],
-  postcss: {
-    plugins: {
-      "@tailwindcss/vite": {}
-    }
-  },
+
   vite: {
-    plugins: [require("@tailwindcss/vite")()]
+    plugins: [tailwindcss()]
   }
   // build
 

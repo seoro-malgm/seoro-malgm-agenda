@@ -10,12 +10,12 @@ import p5 from "p5";
 const props = defineProps({
   items: {
     type: Array,
-    default: [],
+    default: []
   },
   focused: {
     type: Boolean,
-    default: false,
-  },
+    default: false
+  }
 });
 const emit = defineEmits();
 
@@ -48,20 +48,32 @@ watchEffect(() => {
       let collision = true;
 
       while (collision) {
-        x = item.x ?? Math.random() * (w - bubbleSize * 0.95) + bubbleSize * 0.95;
-        y = item.y ?? Math.random() * (h - bubbleSize * 0.95) + bubbleSize * 0.95;
-        collision = list.some((existingItem) => checkCollision({ x, y }, existingItem));
+        x =
+          item.x ?? Math.random() * (w - bubbleSize * 0.95) + bubbleSize * 0.95;
+        y =
+          item.y ?? Math.random() * (h - bubbleSize * 0.95) + bubbleSize * 0.95;
+        collision = list.some(existingItem =>
+          checkCollision({ x, y }, existingItem)
+        );
       }
 
       const speedX = Math.random() * 4 - 2;
       const speedY = Math.random() * 4 - 2;
-      list.push({ x, y, speedX, speedY, text: item.text, size: 20, status: "growing" });
+      list.push({
+        x,
+        y,
+        speedX,
+        speedY,
+        text: item.text,
+        size: 20,
+        status: "growing"
+      });
     }
   }
 });
 
 onMounted(() => {
-  sketch = new p5((p) => {
+  sketch = new p5(p => {
     p.setup = () => {
       const w = p5Container.value.offsetWidth;
       const h = p5Container.value.offsetHeight;
@@ -87,8 +99,10 @@ onMounted(() => {
         // 풍선 위치 업데이트
         item.x += item.speedX;
         item.y += item.speedY;
-        if (item.x < bubbleSize || item.x > p.width - bubbleSize) item.speedX *= -1;
-        if (item.y < bubbleSize || item.y > p.height - bubbleSize) item.speedY *= -1;
+        if (item.x < bubbleSize || item.x > p.width - bubbleSize)
+          item.speedX *= -1;
+        if (item.y < bubbleSize || item.y > p.height - bubbleSize)
+          item.speedY *= -1;
         // 크기가 점점 커지는 로직
         if (item.status === "growing") {
           item.size += 2; // 크기를 점점 증가시킵니다. 증가 속도는 조절 가능합니다.
@@ -98,13 +112,16 @@ onMounted(() => {
         }
 
         const fillColor =
-          p.dist(p.mouseX, p.mouseY, item.x, item.y) < textBoxSize ? "#e4a79d" : "#fff0ed";
+          p.dist(p.mouseX, p.mouseY, item.x, item.y) < textBoxSize
+            ? "#e4a79d"
+            : "#fff0ed";
         p.fill(fillColor);
         p.stroke("#000");
         p.ellipse(item.x, item.y, item.size);
         p.fill(0);
 
-        let isMouseOver = p.dist(p.mouseX, p.mouseY, item.x, item.y) < item.size / 2; // 마우스가 풍선 위에 있는지 여부
+        let isMouseOver =
+          p.dist(p.mouseX, p.mouseY, item.x, item.y) < item.size / 2; // 마우스가 풍선 위에 있는지 여부
         // 커서 스타일 변경
         if (isMouseOver) {
           p.cursor("pointer");
@@ -157,7 +174,7 @@ onBeforeUnmount(() => {
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 #wrapper {
   width: 100%;
   height: 100%;

@@ -232,7 +232,7 @@ const onClicked = item => {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 #board {
   display: flex;
   flex-direction: column;

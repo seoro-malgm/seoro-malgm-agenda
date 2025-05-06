@@ -127,7 +127,7 @@ const submit = async e => {
 const showModalQrCode = ref(false);
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 #typing {
   display: flex;
   flex-direction: column;

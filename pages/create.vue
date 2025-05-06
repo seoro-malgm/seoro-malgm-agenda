@@ -157,7 +157,7 @@ const onSubmit = async e => {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .form-wrapper {
   display: flex;
   width: 100%;

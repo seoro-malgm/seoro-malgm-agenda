@@ -21,9 +21,8 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 #footer {
-  // background-color: ;
   padding: 0.5rem 0;
   width: 100%;
   max-width: 100vw;
@@ -49,7 +48,6 @@ const props = defineProps({
     margin: 0 1rem;
     > nav {
       @media (min-width: 768px) {
-        // padding: 0 0.5rem;
         padding: 0;
         max-width: calc(100% - 2rem);
       }

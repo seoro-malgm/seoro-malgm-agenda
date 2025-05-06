@@ -48,7 +48,7 @@ const showForm = async () => {
 // });
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 #index {
   display: flex;
   flex-direction: column;
@@ -58,8 +58,6 @@ const showForm = async () => {
   height: 100%;
   padding: 3rem 0;
   max-height: calc(100% - 6rem);
-  // height: 100%;
-  // min-height: 100vh;
   > section {
     padding: 1rem 0;
     width: 100%;

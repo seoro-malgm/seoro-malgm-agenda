@@ -2,7 +2,7 @@
   <div>
     <form-input-text
       title="주최 혹은 주관처를 입력하세요(선택사항)"
-      @input="($event) => $emit('input', ['host', $event])"
+      @input="$event => $emit('input', ['host', $event])"
       :form="form"
       bind="host"
     />
@@ -13,8 +13,8 @@
 const props = defineProps({
   form: {
     type: Object,
-    default: null,
-  },
+    default: null
+  }
   // bind: {
   //   type: String,
   //   default: null,
@@ -22,7 +22,7 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 header {
   margin-bottom: 8px;
   h3 {

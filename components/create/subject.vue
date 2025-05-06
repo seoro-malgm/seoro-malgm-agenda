@@ -16,8 +16,8 @@
 const props = defineProps({
   form: {
     type: Object,
-    default: null,
-  },
+    default: null
+  }
   // bind: {
   //   type: String,
   //   default: null,
@@ -26,32 +26,32 @@ const props = defineProps({
 const subjects = ref([
   {
     text: "회의",
-    value: "meeting",
+    value: "meeting"
   },
   {
     text: "네트워킹",
-    value: "networking",
+    value: "networking"
   },
   {
     text: "QnA",
-    value: "qna",
+    value: "qna"
   },
   {
     text: "아이디어 수집",
-    value: "get_idea",
+    value: "get_idea"
   },
   {
     text: "의견 수집",
-    value: "get_opinion",
+    value: "get_opinion"
   },
   {
     text: "아무말대잔치",
-    value: "etc",
-  },
+    value: "etc"
+  }
 ]);
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 header {
   margin-bottom: 8px;
   h3 {

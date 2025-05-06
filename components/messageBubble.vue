@@ -11,16 +11,16 @@
 const props = defineProps({
   item: {
     type: [Object, String, Boolean, Function],
-    default: null,
-  },
+    default: null
+  }
 });
 
-const getDate = (time) => {
+const getDate = time => {
   return new Date(time).toLocaleString();
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .message {
   padding: 16px;
   background-color: $secondary;

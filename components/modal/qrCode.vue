@@ -2,7 +2,9 @@
   <div class="modal" :class="{ show: show }">
     <div class="modal-content">
       <header class="modal-header">
-        <h4>{{ title ? `${title}에 참여해보세요!` : "링크를 공유해보세요!" }}</h4>
+        <h4>
+          {{ title ? `${title}에 참여해보세요!` : "링크를 공유해보세요!" }}
+        </h4>
         <div class="util">
           <button @click="$emit('close')">X</button>
         </div>
@@ -33,7 +35,9 @@
             <input class="form-control" type="text" :value="url" disabled />
           </div>
           <div class="col-12 col-md-3 p-1">
-            <button @click="copyText(url, '주소를')" class="text-nowrap w-100">복사하기</button>
+            <button @click="copyText(url, '주소를')" class="text-nowrap w-100">
+              복사하기
+            </button>
           </div>
         </div>
       </footer>
@@ -50,22 +54,22 @@ const props = defineProps({
   bid: {
     type: String,
     required: true,
-    default: "undefined",
+    default: "undefined"
   },
   title: {
     type: String,
-    default: null,
+    default: null
   },
   url: {
     type: String,
     required: true,
-    default: "url",
+    default: "url"
   },
   show: {
     type: Boolean,
     required: true,
-    default: false,
-  },
+    default: false
+  }
 });
 
 const canvas = ref(null);
@@ -73,7 +77,7 @@ const pending = ref(false);
 
 watch(
   () => props.show,
-  (n) => {
+  n => {
     // 모달이 열릴 떼 QR코드 생성
     if (n) {
       const w = window?.outerWidth || window?.innerWidth;
@@ -87,7 +91,7 @@ watch(
           // text: url.value,
           width: w >= 640 ? 400 : 280,
           height: w >= 640 ? 400 : 280,
-          type: "terminal",
+          type: "terminal"
         },
         function (error) {
           if (error) console.error(error);
@@ -100,7 +104,7 @@ watch(
 );
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .modal-content {
   padding: 8px;
 }

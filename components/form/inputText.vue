@@ -12,22 +12,22 @@ const props = defineProps({
   title: {
     type: String,
     required: true,
-    default: "제목",
+    default: "제목"
   },
   form: {
     type: Object,
-    default: null,
+    default: null
   },
   bind: {
     type: String,
-    default: null,
-  },
+    default: null
+  }
 });
 const emits = defineEmits({
-  input: (payload) => {
+  input: payload => {
     // console.log("payload:", payload);
     return true;
-  },
+  }
 });
 const value = ref(null);
 watch(
@@ -45,7 +45,7 @@ watch(
 );
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .input-group {
   margin-bottom: 4px;
   .input-label {

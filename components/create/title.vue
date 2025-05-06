@@ -10,7 +10,7 @@
       title="무엇을 위한 방인가요? 제목을 입력해주세요."
       :form="form"
       bind="title"
-      @input="($event) => $emit('input', ['title', $event])"
+      @input="$event => $emit('input', ['title', $event])"
     />
     <small>예시: OO모임 주간회의, XX행사 QnA</small>
   </div>
@@ -20,8 +20,8 @@
 const props = defineProps({
   form: {
     type: Object,
-    default: null,
-  },
+    default: null
+  }
   // bind: {
   //   type: String,
   //   default: null,
@@ -29,7 +29,7 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 header {
   margin-bottom: 8px;
   h3 {
