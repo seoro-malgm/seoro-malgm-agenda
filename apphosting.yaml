@@ -1,0 +1,77 @@
+# Firebase App Hosting configuration for Production
+# https://firebase.google.com/docs/app-hosting/multiple-environments?hl=ko
+
+# Runtime configuration
+runtime:
+  name: nodejs20
+  channel: stable
+
+# Build configuration
+build:
+  # Build command
+  command: npm run build
+  # Output directory
+  output: .output
+
+# Environment variables
+env:
+  # Firebase
+  - variable: FIREBASE_API_KEY
+    secret: firebase-api-key
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: FIREBASE_AUTH_DOMAIN
+    secret: firebase-auth-domain
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: FIREBASE_DATABASE_URL
+    secret: firebase-database-url
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: FIREBASE_PROJECT_ID
+    secret: firebase-project-id
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: FIREBASE_STORAGE_BUCKET
+    secret: firebase-storage-bucket
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: FIREBASE_MESSAGING_SENDER_ID
+    secret: firebase-messaging-sender-id
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: FIREBASE_APP_ID
+    secret: firebase-app-id
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: FIREBASE_MEASUREMENT_ID
+    secret: firebase-measurement-id
+    availability:
+      - BUILD
+      - RUNTIME
+
+  # firebase service account
+  # - variable: FIREBASE_SERVICE_ACCOUNT
+  #   secret: firebase-service-account
+  #   availability:
+  #     - BUILD
+  #     - RUNTIME
+
+# Rewrite rules
+rewrites:
+  - source: "**"
+    destination: "/index.html"
